@@ -1,0 +1,28 @@
+# Build directories
+build/
+
+# Log files and directories
+log/
+# Install directories
+install/
+# cache directories
+.cache/
+# Common temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
