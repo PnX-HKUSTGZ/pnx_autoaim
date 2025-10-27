@@ -1,24 +1,32 @@
 [submodule "src/topic_recorder"]
-	path = src/topic_recorder
-	url = https://github.com/PnX-HKUSTGZ/topic_recorder.git
+    path = src/topic_recorder
+    url = https://github.com/PnX-HKUSTGZ/topic_recorder.git
+    branch = main
 [submodule "src/auto-aim"]
-	path = src/auto-aim
-	url = https://github.com/PnX-HKUSTGZ/auto-aim.git
+    path = src/auto-aim
+    url = https://github.com/PnX-HKUSTGZ/auto-aim.git
+    branch = dev
 [submodule "src/vision_bringup"]
-	path = src/vision_bringup
-	url = https://github.com/PnX-HKUSTGZ/vision_bringup.git
+    path = src/vision_bringup
+    url = https://github.com/PnX-HKUSTGZ/vision_bringup.git
+    branch = dev
 [submodule "src/rm_serial_driver"]
-	path = src/rm_serial_driver
-	url = https://github.com/PnX-HKUSTGZ/rm_serial_driver.git
+    path = src/rm_serial_driver
+    url = https://github.com/PnX-HKUSTGZ/rm_serial_driver.git
+    branch = dev
 [submodule "src/hik-driver"]
-	path = src/hik-driver
-	url = https://github.com/PnX-HKUSTGZ/hik-driver.git
+    path = src/hik-driver
+    url = https://github.com/PnX-HKUSTGZ/hik-driver.git
+    branch = dev
 [submodule "src/rm_gimbal_description"]
-	path = src/rm_gimbal_description
-	url = https://github.com/PnX-HKUSTGZ/rm_gimbal_description.git
+    path = src/rm_gimbal_description
+    url = https://github.com/PnX-HKUSTGZ/rm_gimbal_description.git
+    branch = main
 [submodule "src/video_reader"]
-	path = src/video_reader
-	url = https://github.com/PnX-HKUSTGZ/video_reader.git
+    path = src/video_reader
+    url = https://github.com/PnX-HKUSTGZ/video_reader.git
+    branch = dev
 [submodule "third_party_install"]
-	path = third_party_install
-	url = https://github.com/PnX-HKUSTGZ/auto_aim_third_party_install.git
+    path = third_party_install
+    url = https://github.com/PnX-HKUSTGZ/auto_aim_third_party_install.git
+    branch = main
