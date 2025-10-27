@@ -30,3 +30,7 @@
     path = third_party_install
     url = https://github.com/PnX-HKUSTGZ/auto_aim_third_party_install.git
     branch = main
+[submodule "src/auto_aim_interfaces"]
+	path = src/auto_aim_interfaces
+	url = https://github.com/PnX-HKUSTGZ/auto_aim_interfaces.git
+	branch = main
