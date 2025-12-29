@@ -30,3 +30,7 @@
     path = third_party_install
     url = https://github.com/PnX-HKUSTGZ/auto_aim_third_party_install.git
     branch = main
+[submodule "src/ros2_v4l2_camera"]
+	path = src/ros2_v4l2_camera
+	url = https://github.com/tier4/ros2_v4l2_camera.git
+	branch = galactic
