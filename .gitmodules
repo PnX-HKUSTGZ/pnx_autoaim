@@ -21,7 +21,7 @@
 [submodule "src/rm_gimbal_description"]
     path = src/rm_gimbal_description
     url = https://github.com/PnX-HKUSTGZ/rm_gimbal_description.git
-    branch = main
+    branch = sentry
 [submodule "src/video_reader"]
     path = src/video_reader
     url = https://github.com/PnX-HKUSTGZ/video_reader.git
