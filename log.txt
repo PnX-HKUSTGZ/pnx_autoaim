@@ -1,0 +1,718 @@
+[INFO] [launch]: All log files can be found below /home/pnx/.ros/log/2026-02-08-16-36-14-674247-pnx-M9-PRO-90240
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [90291]
+[robot_state_publisher-1] [WARN] [1770539774.843891673] [kdl_parser]: Converting unknown joint type of joint 'gimbal_joint' into a fixed joint
+[robot_state_publisher-1] [INFO] [1770539774.843966660] [robot_state_publisher_main]: got segment camera_main_link
+[robot_state_publisher-1] [INFO] [1770539774.844028488] [robot_state_publisher_main]: got segment camera_main_optical_frame
+[robot_state_publisher-1] [INFO] [1770539774.844033544] [robot_state_publisher_main]: got segment gimbal_link
+[robot_state_publisher-1] [INFO] [1770539774.844037089] [robot_state_publisher_main]: got segment odom_aim
+[robot_state_publisher-1] [INFO] [1770539774.844044200] [robot_state_publisher_main]: Floating joint. Not adding segment from odom_aim to gimbal_link.
+[INFO] [rm_serial_driver_node-2]: process started with pid [90525]
+[rm_serial_driver_node-2] [0m[INFO] [1770539776.355558752] [IoContext::IoContext]: Thread(s) Created: 2[0m
+[rm_serial_driver_node-2] [0m[INFO] [1770539776.355643155] [serial_driver]: Start RMSerialDriver![0m
+[rm_serial_driver_node-2] [33m[WARN] [1770539776.468388184] [serial_driver]: Failed to lookup odom->base_link: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist. canTransform returned after 1.9315e-05 timeout was 0.[0m
+[INFO] [component_container_mt-3]: process started with pid [90685]
+[INFO] [component_container_mt-4]: process started with pid [90700]
+[component_container_mt-3] [0m[INFO] [1770539777.158365995] [main.main_camera_container]: Load Library: /home/pnx/pnx_autoaim/install/hik_camera/lib/libhik_camera.so[0m
+[component_container_mt-3] [0m[INFO] [1770539777.164607934] [main.main_camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<hik_camera::HikCameraNode>[0m
+[component_container_mt-3] [0m[INFO] [1770539777.164682291] [main.main_camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<hik_camera::HikCameraNode>[0m
+[component_container_mt-3] [0m[INFO] [1770539777.184661114] [camera_node]: Starting HikCameraNode![0m
+[component_container_mt-3] [0m[INFO] [1770539777.187952665] [camera_node]: Found camera count = 1[0m
+[INFO] [ballistic_calculation_node-5]: process started with pid [90801]
+[ballistic_calculation_node-5] [0m[INFO] [1770539777.389177304] [ballistic_calculation]: start ballistic calculation![0m
+[component_container_mt-4] [0m[INFO] [1770539777.429962650] [armor_tracker_container]: Load Library: /home/pnx/pnx_autoaim/install/armor_tracker/lib/libarmor_tracker.so[0m
+[component_container_mt-4] [0m[INFO] [1770539777.591773588] [armor_tracker_container]: Found class: rclcpp_components::NodeFactoryTemplate<rm_auto_aim::ArmorTrackerNode>[0m
+[component_container_mt-4] [0m[INFO] [1770539777.592585941] [armor_tracker_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<rm_auto_aim::ArmorTrackerNode>[0m
+[component_container_mt-4] [0m[INFO] [1770539777.635662503] [armor_tracker]: Starting TrackerNode![0m
+[component_container_mt-4] [0m[INFO] [1770539777.675612614] [armor_tracker]: SetMode service advertised at /armor_tracker/set_mode[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/armor_tracker' in container '/armor_tracker_container'
+[component_container_mt-4] [33m[WARN] [1770539777.753308424] [armor_tracker]: Failed to get target with ID: [0m
+[INFO] [rune_solver_node-6]: process started with pid [90910]
+[component_container_mt-3] [0m[INFO] [1770539777.864521254] [camera_node]: AcquisitionFrameRateEnable: false[0m
+[component_container_mt-3] [0m[INFO] [1770539777.865738279] [camera_node]: Exposure time: 2500.000000[0m
+[component_container_mt-3] [0m[INFO] [1770539777.866665383] [camera_node]: Gain: 5.000000[0m
+[component_container_mt-3] [0m[INFO] [1770539777.886524192] [camera_node]: camera calibration URL: package://rm_vision_bringup/config/camera_info.yaml[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/camera_node' in container '/main/main_camera_container'
+[component_container_mt-3] [0m[INFO] [1770539777.889476663] [camera_node]: Publishing image![0m
+[component_container_mt-3] [0m[INFO] [1770539777.901802191] [main.main_camera_container]: Load Library: /home/pnx/pnx_autoaim/install/armor_detector/lib/libarmor_detector.so[0m
+[component_container_mt-3] [0m[INFO] [1770539777.969609972] [main.main_camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<rm_auto_aim::ArmorDetectorNode>[0m
+[component_container_mt-3] [0m[INFO] [1770539777.969676228] [main.main_camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<rm_auto_aim::ArmorDetectorNode>[0m
+[component_container_mt-3] [0m[INFO] [1770539778.057173029] [armor_detector_main]: Starting DetectorNode![0m
+[component_container_mt-3] [0m[INFO] [1770539778.077826853] [armor_detector_main]: Detector initialized[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/armor_detector_main' in container '/main/main_camera_container'
+[component_container_mt-3] [0m[INFO] [1770539778.148907160] [main.main_camera_container]: Load Library: /home/pnx/pnx_autoaim/install/rune_detector/lib/librune_detector.so[0m
+[component_container_mt-3] [0m[INFO] [1770539778.152578117] [main.main_camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<rm_auto_aim::RuneDetectorNode>[0m
+[component_container_mt-3] [0m[INFO] [1770539778.152674540] [main.main_camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<rm_auto_aim::RuneDetectorNode>[0m
+[component_container_mt-3] [31m[ERROR] [1770539778.157348423] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.164749553] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.170851668] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.175725139] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.180049947] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.185524486] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.190348187] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [0m[INFO] [1770539778.193881145] [rune_detector]: Starting RuneDetectorNode![0m
+[component_container_mt-3] [31m[ERROR] [1770539778.194296801] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.200186321] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.208589002] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.216592175] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.228916288] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/rune_detector' in container '/main/main_camera_container'
+[component_container_mt-3] [31m[ERROR] [1770539778.234330700] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.237568188] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.241489502] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.245878337] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.251385562] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.257845176] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.261581732] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.264726160] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.267926639] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.271797736] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.274795661] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.278761640] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.289263777] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.294803363] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.297792404] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.304763350] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[rune_solver_node-6] [0m[INFO] [1770539778.310217143] [rune_solver]: Starting RuneSolverNode![0m
+[component_container_mt-3] [31m[ERROR] [1770539778.314008841] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.324619901] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-3] [31m[ERROR] [1770539778.329955925] [armor_detector_main]: Something Wrong when lookUpTransform: "odom_aim" passed to lookupTransform argument source_frame does not exist. [0m
+[component_container_mt-4] [33m[WARN] [1770539778.757829132] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [0m[INFO] [1770539778.960192591] [armor_tracker]: fps: 0[0m
+[component_container_mt-4] [33m[WARN] [1770539778.960388402] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539778.972596531] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539779.019795213] [armor_tracker]: fps: 1[0m
+[component_container_mt-4] [33m[WARN] [1770539779.019931537] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.028157680] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.144293565] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.152833403] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.214411680] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.236199998] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.355471673] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.378766915] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.385001643] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.391945354] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.417884016] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.428006011] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.433333967] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.456543760] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.466106187] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.469703913] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.481592979] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.496461988] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.504254494] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.593575560] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.604847316] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.642355542] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.654065502] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.655482788] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.679263437] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.680218514] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.703676961] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.706036228] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.729315844] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.758014145] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539779.765977481] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.778112660] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.779485913] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.789436020] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.804818074] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.818484520] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.828417290] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.854961733] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.863399413] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.879198629] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.885059081] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.921588403] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.937017913] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.972566722] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.982392116] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539779.986146822] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.010122122] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539780.087291803] [armor_tracker]: fps: 25[0m
+[component_container_mt-4] [33m[WARN] [1770539780.087477050] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.101306962] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.116089160] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.154014007] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.165359398] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.166512901] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.178968032] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.202410928] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.218813772] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.219111426] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.245591788] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.275629594] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.281842226] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.296679563] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.315291482] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.325610348] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.332221758] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.340900093] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.354778081] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.391772574] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.404936260] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.419927807] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.426531703] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.459065303] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.469922817] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.504242716] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.515033229] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.537352223] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.544193095] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.598791345] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.618821766] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.644372429] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.662318606] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.667324892] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.674314737] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.702751838] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.719282807] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.752225278] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.765522028] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.767933216] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539780.782152960] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.787522114] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.793452026] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.813189484] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.882301145] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.902730256] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.926243596] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.939658193] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.947507190] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.957269244] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.968827108] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.972756640] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539780.997846365] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.008190481] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539781.034138499] [armor_tracker]: fps: 28[0m
+[component_container_mt-4] [33m[WARN] [1770539781.034324498] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.050390036] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.083939720] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.089776025] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.094688920] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.108405253] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.130688091] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.137783802] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.146541090] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.157546149] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.162097552] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.180861437] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.193593428] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.208766778] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.216653128] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.220600720] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.234188984] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.266968778] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.277272560] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.293145562] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.304086697] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.309225140] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.323038789] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.366357833] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.376633493] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.401093417] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.405241122] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.430596202] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.445249582] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.455679819] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.458167106] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.470285754] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.508113683] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.515780517] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.581154549] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.606301063] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.613945857] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.768037216] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539781.855757700] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.874124761] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.880949731] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.894350893] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.919119957] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.964423607] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.970395936] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.976482052] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.986099991] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539781.988066287] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539782.001218956] [armor_tracker]: fps: 26[0m
+[component_container_mt-4] [33m[WARN] [1770539782.001464126] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.007141665] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.051647217] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.057021115] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.063476368] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.068274997] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.076523614] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.090448550] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.098840483] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.132870323] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.145117638] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.166001954] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.181010873] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.191754175] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.209759604] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.234875711] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.246517716] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.254049092] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.272118575] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.281163262] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.296666747] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.304227280] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.319750412] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.334773438] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.348702360] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.361402897] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.373283181] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.386201459] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.395992573] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.460913853] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.468093838] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.483525704] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.496288952] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.511017852] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.522125068] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.557061934] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.564534681] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.588688263] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.593123028] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.643548082] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.653759314] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.653920457] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.666617126] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.674467757] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.697644316] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.719703869] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.734306945] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.748218103] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.757719847] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.768173914] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539782.783787678] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.802995909] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.804279211] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.816947981] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.824217631] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.848576646] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.863405970] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.873309810] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.879478900] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.916685831] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.923052173] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.933802245] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.939489609] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.973753197] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.981525966] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.984120439] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.997457028] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539782.999786795] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.005152078] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539783.028904058] [armor_tracker]: fps: 41[0m
+[component_container_mt-4] [33m[WARN] [1770539783.029064208] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.037379400] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.057542488] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.072344801] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.075319254] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.080011289] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.117710927] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.121993355] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.132200407] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.136061189] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.145540765] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.162995727] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.169205826] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.189586963] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.207837056] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.209298024] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.213527430] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.234587610] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.248121124] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.283800196] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.289095572] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.320224980] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.332925813] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.344990864] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.355228829] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.358948531] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.366802301] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.386069604] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.396149189] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.410184989] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.464194557] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.481711858] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.529362464] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.544200248] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.560831163] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.577855177] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.595288796] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.603533083] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.609396762] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.622727832] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.624948372] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.631718748] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.653344769] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.665979956] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.682876294] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.708477208] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.720071154] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.731118099] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.739334535] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.752266836] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.752785782] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.758619204] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.765284238] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.768205067] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539783.776676223] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.796457333] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.812639473] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.823745236] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.862896309] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.872910468] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.918719862] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.940296789] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.956876100] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.962962062] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539783.989582066] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.002162986] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539784.003866834] [armor_tracker]: fps: 34[0m
+[component_container_mt-4] [33m[WARN] [1770539784.004030226] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.015057437] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.020386993] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.048668523] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.062996276] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.076624736] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.087710418] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.093243032] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.180244943] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.193735670] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.196692140] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.216699356] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.242099552] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.253028427] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.259385170] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.266782081] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.289998435] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.294210952] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.306847049] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.308913811] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.313283069] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.336352652] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.348156929] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.359030732] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.381909378] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.392197629] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.408036435] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.416464819] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.438596305] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.446726170] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.460655376] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.479229412] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.493975597] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.505113437] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.527389517] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.541716516] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.548167954] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.648075921] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.657868557] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.671410894] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.684777613] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.731381693] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.744772476] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.755942400] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.758065477] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.768265383] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539784.782134491] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.789371201] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.795526108] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.808001116] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.817281774] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.857061951] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.877439162] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.911958549] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.919915613] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.933258398] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.952451819] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.967631273] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539784.982730208] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539785.034832027] [armor_tracker]: fps: 32[0m
+[component_container_mt-4] [33m[WARN] [1770539785.035105293] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.049337274] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.058580351] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.068009365] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.078392277] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.151283025] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.156335006] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.173285574] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.181128970] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.186630575] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.218430960] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.233020963] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.258255034] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.270145510] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.272926981] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.280502690] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.306780283] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.318224959] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.336375958] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.349866648] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.356114551] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.379147833] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.399738653] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.434642081] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.452955305] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.466594398] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.480566705] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.496200908] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.501453393] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.537867038] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.547228004] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.559191081] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.570031691] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.573145630] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.588841187] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.594526813] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.605370800] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.617292293] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.634306518] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.644146142] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.648122677] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.658566625] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.669702295] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.675412263] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.680999092] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.689391939] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.693408014] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.703868655] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.721177300] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.731998900] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.738230086] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.749353009] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.762941111] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.768274685] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539785.774152773] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.783365666] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.798998875] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.805574214] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.856990873] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.867775967] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.873732632] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.919358775] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.932481628] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.944206885] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.961048506] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.986495925] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539785.994611489] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539786.010991726] [armor_tracker]: fps: 37[0m
+[component_container_mt-4] [33m[WARN] [1770539786.011161980] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.027169539] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.082210150] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.095086112] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.095492493] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.100683245] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.110074932] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.133158838] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.145227549] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.154820445] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.159515136] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.173960684] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.195180258] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.197906358] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.209926812] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.266038220] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.272724188] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.339604098] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.343351728] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.396697801] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.404064210] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.434004673] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.440936614] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.445781726] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.451446820] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.488369814] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.498084581] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.523218760] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.536168797] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.585550354] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.605120211] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.645425501] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.651803062] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.719322072] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.730634682] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.758018480] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.769091447] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539786.776036217] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.783448258] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.805981220] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.814033121] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.829240702] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.856301680] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.870913621] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.879447139] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.888434715] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.890858441] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.902927448] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.927961038] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.933233543] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.939547345] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.951560764] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.967448917] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.976173866] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.983968073] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539786.998194513] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.012149029] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539787.026998826] [armor_tracker]: fps: 30[0m
+[component_container_mt-4] [33m[WARN] [1770539787.027140596] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.032205663] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.062962868] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.074703159] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.098420992] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.116179899] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.138608611] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.146524552] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.173777648] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.185427726] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.205615264] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.229159093] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.252321285] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.267597991] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.275180304] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.306295839] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.317535719] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.357544091] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.367307820] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.373839130] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.379912420] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.429352889] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.454111983] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.462828001] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.496485375] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.503473953] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.511460655] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.533344864] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.546421094] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.555628949] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.573237435] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.579674116] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.608140586] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.621953009] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.643032300] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.649712568] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.669929565] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.693090474] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.699901692] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.715407471] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.725374482] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.766543913] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.777669138] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.778341162] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539787.779117846] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.782615812] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.800983286] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.814274364] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.819350298] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.850802322] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.870976330] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.878301313] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.886637564] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.901977081] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.931153161] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.960167183] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.973150405] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.985340368] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539787.994775366] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539788.007553757] [armor_tracker]: fps: 32[0m
+[component_container_mt-4] [33m[WARN] [1770539788.007735530] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.023941010] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.075080369] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.084703065] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.166786696] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.175463874] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.177470261] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.187361565] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.208152848] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.227730637] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.239078558] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.246293568] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.250699223] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.254464193] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.262838098] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.267525462] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.292760681] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.298067250] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.327418639] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.331935419] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.350756779] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.362519536] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.374561033] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.377282955] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.384903716] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.394300340] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.405304706] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.439367409] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.461213563] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.462578296] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.473857957] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.481717966] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.505689488] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.516857362] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.558968405] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.563674128] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.579940893] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.585730398] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.601456349] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.612438004] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.638814133] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.656995820] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.675143683] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.687955053] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.700548996] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.713859204] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.729639035] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.730068729] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.747856338] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.763949852] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.773109650] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.779824055] [armor_tracker]: Failed to get target with ID: [0m
+[component_container_mt-4] [33m[WARN] [1770539788.797031647] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.817906725] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.831951474] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.836251121] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.853839512] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.863084232] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.903262042] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.916999780] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.933079147] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.941223099] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.943125165] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.954277766] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.969197495] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.982616563] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.988266273] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539788.994991678] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [0m[INFO] [1770539789.021855712] [armor_tracker]: fps: 38[0m
+[component_container_mt-4] [33m[WARN] [1770539789.022032616] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.028846595] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.061523795] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.068464665] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.083962304] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.087962580] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.096857880] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.113432762] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.159730575] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.171426573] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.287088652] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.294756961] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.362150205] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.366355542] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.372901423] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[component_container_mt-4] [33m[WARN] [1770539789.387280236] [armor_tracker]: No active trackers available. Initializing new trackers if possible.[0m
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[rune_solver_node-6] [0m[INFO] [1770539789.390798637] [rclcpp]: signal_handler(signum=2)[0m
+[ballistic_calculation_node-5] [0m[INFO] [1770539789.390832428] [rclcpp]: signal_handler(signum=2)[0m
+[component_container_mt-4] [0m[INFO] [1770539789.390952649] [rclcpp]: signal_handler(signum=2)[0m
+[robot_state_publisher-1] [INFO] [1770539789.390954692] [rclcpp]: signal_handler(signum=2)
+[INFO] [ballistic_calculation_node-5]: process has finished cleanly [pid 90801]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 90291]
+[INFO] [rune_solver_node-6]: process has finished cleanly [pid 90910]
+[INFO] [rm_serial_driver_node-2]: process has finished cleanly [pid 90525]
+[INFO] [component_container_mt-4]: process has finished cleanly [pid 90700]
+[component_container_mt-3] [0m[INFO] [1770539789.392635271] [rclcpp]: signal_handler(signum=2)[0m
+[rm_serial_driver_node-2] [0m[INFO] [1770539789.392711989] [rclcpp]: signal_handler(signum=2)[0m
+[component_container_mt-3] [0m[INFO] [1770539791.609612895] [camera_node]: HikCameraNode destroyed![0m
+[INFO] [component_container_mt-3]: process has finished cleanly [pid 90685]
